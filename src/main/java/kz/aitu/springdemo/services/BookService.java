@@ -80,13 +80,18 @@ public class BookService implements BookServiceInterface{
     @Override
     public Book returnBook(int book_id) {
         Book book = getById(book_id);
+        List<History> historyList = historyRepository.getByBookID(book_id);
         if (book != null && book.isBorrowed()) {
             book.setBorrower_id(null);
             book.setBorrowed(false);
+            for (History history : historyList) {
+                historyRepository.deleteById(history.getId());
+            }
             return create(book);
         }
         return null;
     }
+    //when returning book we change info in book table and delete record in history table
 
 }
 //actually here we just overriding (calling) functions that we described in other files

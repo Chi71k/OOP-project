@@ -35,7 +35,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/books/20",
+							"raw": "http://localhost:8080/books/10",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -43,7 +43,7 @@
 							"port": "8080",
 							"path": [
 								"books",
-								"20"
+								"10"
 							]
 						}
 					},
@@ -114,7 +114,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/books/borrow/book_id/12/user_id/1",
+							"raw": "http://localhost:8080/books/borrow/book_id/10/user_id/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -124,9 +124,9 @@
 								"books",
 								"borrow",
 								"book_id",
-								"12",
+								"10",
 								"user_id",
-								"1"
+								"4"
 							]
 						}
 					},
@@ -135,7 +135,7 @@
 				{
 					"name": "returnBook",
 					"request": {
-						"method": "POST",
+						"method": "DELETE",
 						"header": [],
 						"url": {
 							"raw": "http://localhost:8080/books/return/4",
@@ -258,7 +258,28 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/history/book_id/01.03.2024",
+							"raw": "http://localhost:8080/history/book_day/01.03.2024",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"history",
+								"book_day",
+								"01.03.2024"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by bookID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/history/book_id/10",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -267,7 +288,28 @@
 							"path": [
 								"history",
 								"book_id",
-								"01.03.2024"
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by userID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/history/user_id/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"history",
+								"user_id",
+								"4"
 							]
 						}
 					},

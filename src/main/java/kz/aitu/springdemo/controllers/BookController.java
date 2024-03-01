@@ -73,7 +73,7 @@ public class BookController {
     //borrowing book using userID and bookID also we write Date in body as we were creating new book
     //also checks if borrowing book already borrowed or not
 
-    @PostMapping("/return/{book_id}")
+    @DeleteMapping("/return/{book_id}")
     public ResponseEntity<Book> returnBook(@PathVariable int book_id){
         Book returnedBook = service.returnBook(book_id);
         if (returnedBook != null){

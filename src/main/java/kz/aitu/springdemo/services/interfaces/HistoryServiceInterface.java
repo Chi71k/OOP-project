@@ -9,5 +9,8 @@ public interface HistoryServiceInterface {
     History getById(int id);
     History create(History history);
     List<History> getByBorrowday(String borrowday);
+    List<History> getByBookID(int bookID);
+    History deleteByBookID(int bookID);
+    List<History> getByUserID(int userID);
 }
 //calling all history functions so we can override them and use in future, also we mention their inputs
