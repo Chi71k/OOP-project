@@ -7,6 +7,7 @@ import java.util.List;
 public interface HistoryServiceInterface {
     List<History> getAll();
     History getById(int id);
-    History deleteById(int id);
     History create(History history);
+    List<History> getByBorrowday(String borrowday);
 }
+//calling all history functions so we can override them and use in future, also we mention their inputs

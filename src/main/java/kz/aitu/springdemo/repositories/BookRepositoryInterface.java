@@ -7,3 +7,4 @@ import java.util.List;
 
 public interface BookRepositoryInterface extends JpaRepository<Book, Integer>{
 }
+//connecting as well as helping to calling functions

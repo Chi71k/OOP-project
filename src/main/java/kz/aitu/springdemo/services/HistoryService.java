@@ -29,10 +29,9 @@ public class HistoryService implements HistoryServiceInterface {
     public History getById(int id){
         return repo.findById(id).orElse(null);
     }
-
     @Override
-    public History deleteById(int id){
-        repo.deleteById(id);
-        return null;
+    public List<History> getByBorrowday(String borrowday){
+        return repo.findByBorrowday(borrowday);
     }
 }
+//actually here we just overriding (calling) functions that we described in other files

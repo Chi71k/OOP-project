@@ -9,3 +9,4 @@ public interface UserServiceInterface {
     User getById(int id);
     User create(User user);
 }
+//calling all user functions so we can override them and use in future, also we mention their inputs

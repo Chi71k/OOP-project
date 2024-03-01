@@ -12,11 +12,14 @@ import java.util.List;
 @Data
 @Entity
 @Table(name = "user_db")
+//connecting to table
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //generating id automatically
     private int id;
     private String username;
     private String phone;
     private String email;
+    // just as getter and setter but this is our columns in table, our variables
 }

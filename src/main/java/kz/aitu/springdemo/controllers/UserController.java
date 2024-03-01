@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("users")
+//need to write users in order to use this
 public class UserController {
 
     private final UserServiceInterface service;
@@ -22,6 +23,7 @@ public class UserController {
     public List<User> getAll(){
         return service.getAll();
     }
+    //getting all users
 
     @GetMapping("/{user_id}")
     public ResponseEntity<User> getById(@PathVariable("user_id") int id){
@@ -31,6 +33,7 @@ public class UserController {
 
         return new ResponseEntity<>(user, HttpStatus.OK); //200
     }
+    //getting users by id
 
     @PostMapping("/create")
     public ResponseEntity<User> create(@RequestBody User user){
@@ -40,5 +43,6 @@ public class UserController {
 
         return new ResponseEntity<>(createdUser, HttpStatus.CREATED); //201
     }
+    //adding new users by post
 
 }
