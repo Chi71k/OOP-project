@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "0dd336f3-73a4-4a72-a465-78e47f568948",
-		"name": "springdemo",
+		"name": "OOP-project",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "33173456"
 	},
@@ -13,7 +13,19 @@
 					"name": "getAll",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/books/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"books",
+								"all"
+							]
+						}
 					},
 					"response": []
 				},
@@ -21,7 +33,19 @@
 					"name": "getById",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/books/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"books",
+								"20"
+							]
+						}
 					},
 					"response": []
 				},
@@ -29,7 +53,28 @@
 					"name": "createBook",
 					"request": {
 						"method": "POST",
-						"header": []
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookname\": \"1984 \",\r\n    \"author\": \"George Orwell\",\r\n    \"year\": 1999,\r\n    \"price\": 500,\r\n    \"borrow\": false,\r\n    \"borrower_id\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/books/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"books",
+								"create"
+							]
+						}
 					},
 					"response": []
 				},
@@ -39,7 +84,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/books/delete/5",
+							"raw": "http://localhost:8080/books/delete/11",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -48,7 +93,7 @@
 							"path": [
 								"books",
 								"delete",
-								"5"
+								"11"
 							]
 						}
 					},
@@ -59,8 +104,17 @@
 					"request": {
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "01.03.2024",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "http://localhost:8080/books/borrow/4/4",
+							"raw": "http://localhost:8080/books/borrow/book_id/12/user_id/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -69,8 +123,10 @@
 							"path": [
 								"books",
 								"borrow",
-								"4",
-								"4"
+								"book_id",
+								"12",
+								"user_id",
+								"1"
 							]
 						}
 					},
@@ -126,7 +182,19 @@
 					"name": "show by id",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"4"
+							]
+						}
 					},
 					"response": []
 				},
@@ -137,7 +205,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"Dyou1sen\",\r\n    \"phone\": \"+77783390355\",\r\n    \"email\": \"temirxan.erasyl@mail.ru\",\r\n    \"password\": \"Eroha100!\",\r\n    \"role\": \"admin\"\r\n}",
+							"raw": "{\r\n    \"username\": \"Nurgissa\",\r\n    \"phone\": \"+77783390355\",\r\n    \"email\": \"1212@mail.ru\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -154,6 +222,52 @@
 							"path": [
 								"users",
 								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "history",
+			"item": [
+				{
+					"name": "all history",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/history/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"history",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by borrowday",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/history/book_id/01.03.2024",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"history",
+								"book_id",
+								"01.03.2024"
 							]
 						}
 					},
